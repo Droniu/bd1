@@ -1,13 +1,64 @@
-CREATE TABLE Employees (EmployeeID int(10) NOT NULL AUTO_INCREMENT, firstName varchar(255) NOT NULL, lastName varchar(255) NOT NULL, salary int(10), PRIMARY KEY (EmployeeID));
-CREATE TABLE Tasks (taskID int(10) NOT NULL AUTO_INCREMENT, OrderID int(10) NOT NULL, EmployeeID int(10) NOT NULL, taskDescription varchar(255), PRIMARY KEY (taskID));
-CREATE TABLE Services (serviceName int(10) NOT NULL AUTO_INCREMENT, price int(10), PRIMARY KEY (serviceName));
-CREATE TABLE Orders (orderID int(10) NOT NULL AUTO_INCREMENT, CarLicense int(10) NOT NULL, status varchar(255), `date` date, PRIMARY KEY (orderID));
-CREATE TABLE Services_Orders (serviceName int(10) NOT NULL, orderID int(10) NOT NULL, PRIMARY KEY (serviceName, orderID));
-CREATE TABLE Car (License int(10) NOT NULL AUTO_INCREMENT, ClientID int(10) NOT NULL, model varchar(255), year int(10), serviceDate date, PRIMARY KEY (License));
-CREATE TABLE Client (ClientID int(10) NOT NULL AUTO_INCREMENT, firstName varchar(255), lastName varchar(255), PRIMARY KEY (ClientID));
-CREATE TABLE Employees_Tasks (EmployeesEmployeeID int(10) NOT NULL, TaskstaskID int(10) NOT NULL, PRIMARY KEY (EmployeesEmployeeID, TaskstaskID));
-CREATE TABLE Parts (orderID int(10) NOT NULL, price int(10), name varchar(255), manufacturer varchar(255), PRIMARY KEY (orderID));
-CREATE TABLE Parts_Orders (PartsOrderID int(10) NOT NULL, OrdersOrderID int(10) NOT NULL, PRIMARY KEY (PartsOrderID, OrdersOrderID));
+CREATE TABLE Employees (
+    EmployeeID int(10) NOT NULL AUTO_INCREMENT,
+    firstName varchar(255) NOT NULL,
+    lastName varchar(255) NOT NULL,
+    salary int(10),
+    PRIMARY KEY (EmployeeID)
+);
+CREATE TABLE Tasks (
+    taskID int(10) NOT NULL AUTO_INCREMENT,
+    OrderID int(10) NOT NULL,
+    EmployeeID int(10) NOT NULL,
+    taskDescription varchar(255),
+    PRIMARY KEY (taskID)
+);
+CREATE TABLE Services (
+    serviceName int(10) NOT NULL AUTO_INCREMENT,
+    price int(10),
+    PRIMARY KEY (serviceName)
+);
+CREATE TABLE Orders (orderID int(10) NOT NULL AUTO_INCREMENT,
+    CarLicense int(10) NOT NULL, 
+    status varchar(255),
+    `date` date,
+    PRIMARY KEY (orderID)
+);
+CREATE TABLE Services_Orders (
+    serviceName int(10) NOT NULL,
+    orderID int(10) NOT NULL,
+    PRIMARY KEY (serviceName, orderID)
+);
+CREATE TABLE Car (
+    License int(10) NOT NULL AUTO_INCREMENT,
+    ClientID int(10) NOT NULL,
+    model varchar(255),
+    year int(10),
+    serviceDate date,
+    PRIMARY KEY (License)
+);
+CREATE TABLE Client (
+    ClientID int(10) NOT NULL AUTO_INCREMENT,
+    firstName varchar(255),
+    lastName varchar(255),
+    PRIMARY KEY (ClientID)
+);
+CREATE TABLE Employees_Tasks (
+    EmployeesEmployeeID int(10) NOT NULL,
+    TaskstaskID int(10) NOT NULL,
+    PRIMARY KEY (EmployeesEmployeeID, TaskstaskID)
+);
+CREATE TABLE Parts (
+    orderID int(10) NOT NULL,
+    price int(10),
+    name varchar(255),
+    manufacturer varchar(255),
+    PRIMARY KEY (orderID)
+);
+CREATE TABLE Parts_Orders (
+    PartsOrderID int(10) NOT NULL,
+    OrdersOrderID int(10) NOT NULL,
+    PRIMARY KEY (PartsOrderID, OrdersOrderID)
+);
 ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O986965 FOREIGN KEY (serviceName) REFERENCES Services (serviceName);
 ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O848022 FOREIGN KEY (orderID) REFERENCES Orders (orderID);
 ALTER TABLE Tasks ADD CONSTRAINT FKTasks77706 FOREIGN KEY (OrderID) REFERENCES Orders (orderID);
