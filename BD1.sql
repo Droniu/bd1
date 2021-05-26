@@ -13,9 +13,9 @@ CREATE TABLE Tasks (
     PRIMARY KEY (taskID)
 );
 CREATE TABLE Services (
-    serviceName int(10) NOT NULL AUTO_INCREMENT,
+    servicID int(10) NOT NULL AUTO_INCREMENT,
     price int(10),
-    PRIMARY KEY (serviceName)
+    PRIMARY KEY (serviceID)
 );
 CREATE TABLE Orders (orderID int(10) NOT NULL AUTO_INCREMENT,
     CarLicense int(10) NOT NULL, 
@@ -24,9 +24,9 @@ CREATE TABLE Orders (orderID int(10) NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (orderID)
 );
 CREATE TABLE Services_Orders (
-    serviceName int(10) NOT NULL,
+    serviceID int(10) NOT NULL,
     orderID int(10) NOT NULL,
-    PRIMARY KEY (serviceName, orderID)
+    PRIMARY KEY (serviceID, orderID)
 );
 CREATE TABLE Car (
     License int(10) NOT NULL AUTO_INCREMENT,
@@ -59,7 +59,7 @@ CREATE TABLE Parts_Orders (
     OrdersOrderID int(10) NOT NULL,
     PRIMARY KEY (PartsOrderID, OrdersOrderID)
 );
-ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O986965 FOREIGN KEY (serviceName) REFERENCES Services (serviceName);
+ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O986965 FOREIGN KEY (serviceID) REFERENCES Services (serviceID);
 ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O848022 FOREIGN KEY (orderID) REFERENCES Orders (orderID);
 ALTER TABLE Tasks ADD CONSTRAINT FKTasks77706 FOREIGN KEY (OrderID) REFERENCES Orders (orderID);
 ALTER TABLE Orders ADD CONSTRAINT FKOrders26613 FOREIGN KEY (CarLicense) REFERENCES Car (License);
