@@ -1,3 +1,5 @@
+-- parts_orders fix
+
 CREATE TABLE Employees (
     EmployeeID int(10) NOT NULL AUTO_INCREMENT,
     firstName varchar(255) NOT NULL,
