@@ -50,6 +50,7 @@ CREATE TABLE Employees_Tasks (
 CREATE TABLE Parts (
     orderID int(10) NOT NULL,
     price int(10),
+    qty int(10),
     name varchar(255),
     manufacturer varchar(255),
     PRIMARY KEY (orderID)
