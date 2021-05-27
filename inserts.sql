@@ -122,3 +122,37 @@ insert into services (price ) values (320);
 insert into services (price ) values (110);
 insert into services (price ) values (280);
 insert into services (price ) values (210);
+
+
+--PARTS TABLE
+
+insert into parts (price, qty, name , manufacturer) values (4000, 1, 'Shor Engine', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (2000, 1, 'Engine block', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (250, 1, 'Engine block mounting parts', 'Knecht');
+insert into parts (price, qty, name , manufacturer) values (100, 1, 'Timing case', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (400, 1, 'Oil level indicator', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (1100, 1, 'Cylinder head', 'Hitachi');
+insert into parts (price, qty, name , manufacturer) values (25, 1, 'Cylinder head attached parts', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (1200, 1, 'Cylinder head cover', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Belt Drive-Vibration Damper', 'Gates');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Belt Drive Water Pump/Alternator', 'Valeo');
+insert into parts (price, qty, name , manufacturer) values (250, 1, 'Crankshaft with bearing shells', 'Febi-Bilstein');
+insert into parts (price, qty, name , manufacturer) values (100, 1, 'Crankshaft Connecting Rod', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (100, 1, 'Crankshaft-Pistons', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Waterpump - Thermostat ', 'Febi-Bilstein');
+insert into parts (price, qty, name , manufacturer) values (150, 1, 'Engine acoustics', 'Febi-Bilstein');
+insert into parts (price, qty, name , manufacturer) values (300, 1, 'Emission reduction cooling', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (100, 1, 'Brake shoes', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (50, 1, 'Engine Oil', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (350, 1, 'Radiator', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Hydro unit', 'Knecht');
+insert into parts (price, qty, name , manufacturer) values (259, 1, 'Brake pipe', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (50, 1, 'Brake disc ', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Clutch', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (500, 1, 'Clutch control', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (600, 1, 'Fuel pipes', 'Bosh');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Control unit for fuel pump', 'Contitech');
+insert into parts (price, qty, name , manufacturer) values (50, 1, 'Air filter', 'NGK');
+insert into parts (price, qty, name , manufacturer) values (60, 1, 'Fuel filter', 'Knecht');
+insert into parts (price, qty, name , manufacturer) values (200, 1, 'Gear shifting', 'Febi-Bilstein');
+insert into parts (price, qty, name , manufacturer) values (120, 1, 'Performance gearshift knob', 'Gates');
