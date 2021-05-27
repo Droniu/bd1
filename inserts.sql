@@ -151,28 +151,46 @@ insert into parts (price, qty, name , manufacturer) values (120, 1, 'Performance
 insert into parts_orders (PartspartID , OrdersorderID) values (3,1);
 insert into parts_orders (PartspartID , OrdersorderID) values (7,1);
 insert into parts_orders (PartspartID , OrdersorderID) values (8,1);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (10, 2);
 insert into parts_orders (PartspartID , OrdersorderID) values (15, 2);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (20, 4);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (19, 6);
 insert into parts_orders (PartspartID , OrdersorderID) values (20, 6);
 insert into parts_orders (PartspartID , OrdersorderID) values (22, 6);
 insert into parts_orders (PartspartID , OrdersorderID) values (23, 6);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (5, 10);
 insert into parts_orders (PartspartID , OrdersorderID) values (11, 10);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (9, 11);
 insert into parts_orders (PartspartID , OrdersorderID) values (18, 11);
 insert into parts_orders (PartspartID , OrdersorderID) values (20, 11);
 insert into parts_orders (PartspartID , OrdersorderID) values (21, 11);
 insert into parts_orders (PartspartID , OrdersorderID) values (22, 11);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (1, 12);
 insert into parts_orders (PartspartID , OrdersorderID) values (29, 12);
-
 insert into parts_orders (PartspartID , OrdersorderID) values (14, 13);
 
+-- SERVICES_ORDERS
+
+insert into services_orders (serviceID , orderID) values (1, 1);
+insert into services_orders (serviceID , orderID) values (10, 1);
+insert into services_orders (serviceID , orderID) values (20, 1);
+insert into services_orders (serviceID , orderID) values (5, 2);
+insert into services_orders (serviceID , orderID) values (7, 2);
+insert into services_orders (serviceID , orderID) values (15, 3);
+insert into services_orders (serviceID , orderID) values (17 , 4);
+insert into services_orders (serviceID , orderID) values (25, 5);
+insert into services_orders (serviceID , orderID) values (27, 5);
+insert into services_orders (serviceID , orderID) values (29, 5);
+insert into services_orders (serviceID , orderID) values (19, 6);
+insert into services_orders (serviceID , orderID) values (21, 7);
+insert into services_orders (serviceID , orderID) values (30, 8);
+insert into services_orders (serviceID , orderID) values (25, 8);
+insert into services_orders (serviceID , orderID) values (20, 8);
+insert into services_orders (serviceID , orderID) values (24, 9);
+insert into services_orders (serviceID , orderID) values (16, 10);
+insert into services_orders (serviceID , orderID) values (23, 10);
+insert into services_orders (serviceID , orderID) values (2, 11);
+insert into services_orders (serviceID , orderID) values (1, 12);
+insert into services_orders (serviceID , orderID) values (7, 13);
+insert into services_orders (serviceID , orderID) values (10, 14);
+insert into services_orders (serviceID , orderID) values (22, 14);
