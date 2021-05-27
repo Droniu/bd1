@@ -42,7 +42,7 @@
 UPDATE Car
     SET serviceDate = date
     WHERE ClientID = 2
-    --input1 = newName
+    --input1 = date
     --input2 = ClientID
 
 
