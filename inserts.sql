@@ -62,3 +62,30 @@ insert into car (ClientID, model, year, serviceDate) values (2, 'C-Class', 2009,
 insert into car (ClientID, model, year, serviceDate) values (2, 'LS Hybrid', 2011, '2021-05-24');
 insert into car (ClientID, model, year, serviceDate) values (1, 'Murciélago', 2004, '2021-05-25');
 
+-- ORDERS TABLE
+
+insert into orders (CarLicense, status, date) values (2, 'Realized', '2021-05-23');
+insert into orders (CarLicense, status, date) values (3, 'Waiting ', '2021-05-21');
+insert into orders (CarLicense, status, date) values (4, 'Realizing', '2021-05-21');
+insert into orders (CarLicense, status, date) values (5, 'Realizing', '2021-05-26');
+insert into orders (CarLicense, status, date) values (6, 'Waiting ', '2021-05-25');
+insert into orders (CarLicense, status, date) values (7, 'Realizing', '2021-05-21');
+insert into orders (CarLicense, status, date) values (8, 'Waiting ', '2021-05-26');
+insert into orders (CarLicense, status, date) values (9, 'Realized', '2021-05-22');
+insert into orders (CarLicense, status, date) values (10, 'Waiting ', '2021-05-21');
+insert into orders (CarLicense, status, date) values (11, 'Realizing', '2021-05-26');
+insert into orders (CarLicense, status, date) values (12, 'Waiting ', '2021-05-23');
+insert into orders (CarLicense, status, date) values (13, 'Realized', '2021-05-25');
+insert into orders (CarLicense, status, date) values (14, 'Realized', '2021-05-21');
+insert into orders (CarLicense, status, date) values (15, 'Waiting ', '2021-05-22');
+insert into orders (CarLicense, status, date) values (16, 'Waiting ', '2021-05-21');
+insert into orders (CarLicense, status, date) values (17, 'Realizing', '2021-05-23');
+insert into orders (CarLicense, status, date) values (18, 'Realized', '2021-05-23');
+insert into orders (CarLicense, status, date) values (19, 'Realized', '2021-05-21');
+insert into orders (CarLicense, status, date) values (20, 'Waiting ', '2021-05-24');
+insert into orders (CarLicense, status, date) values (21, 'Waiting ', '2021-05-25');
+insert into orders (CarLicense, status, date) values (22, 'Waiting ', '2021-05-23');
+insert into orders (CarLicense, status, date) values (23, 'Waiting ', '2021-05-25');
+insert into orders (CarLicense, status, date) values (24, 'Realizing', '2021-05-23');
+insert into orders (CarLicense, status, date) values (25, 'Realizing', '2021-05-25');
+insert into orders (CarLicense, status, date) values (26, 'Realizing', '2021-05-26');
