@@ -39,7 +39,22 @@
 
 -- 12 Update car service date
 
+UPDATE Car
+    SET serviceDate = date
+    WHERE ClientID = 2
+    --input1 = newName
+    --input2 = ClientID
+
+
 -- 11 Browse car parts
+
+ SELECT
+	P.partID AS "Part ID"
+	P.price AS "Price"
+	P.name AS "Name"
+	P.manufacturer AS "Manufacturer"
+ FROM Parts
+
 
 -- 10 Browse tasks 
     SELECT
@@ -55,11 +70,19 @@
 
 -- 9 Set order status
 
+ UPDATE Orders
+    SET status = "currentStatus"
+    WHERE orderID = 2
+    --input1 = currentStatus
+    --input2 = orderID
+
+
 -- 8 Edit list of parts to buy
     -- OPTIONAL (only if part doesn't yet exist in database)
     INSERT INTO Parts (price, qty, name, manufacturer)
     VALUES (1, 2, "3", "4");
     -- four inputs
+
 
     INSERT INTO Parts_Orders
     VALUES (1, 2);
