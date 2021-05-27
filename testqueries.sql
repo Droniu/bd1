@@ -29,6 +29,7 @@
     --input1 = serviceID
     --input2 = orderID
 
+
 -- 13 Upate client data
     UPDATE Client
     SET firstName = "newName"
@@ -91,15 +92,59 @@ UPDATE Car
 
 -- 7 Check order status
 
+ SELECT O.status
+ FROM Orders
+ WHERE orderID = input1
+ -- input1 = orderID
+
+
 -- 6 Check car service date
+
+ SELECT C.serviceDate
+ FROM Cars
+ WHERE License = input1
+ -- input1 = License
+ 
 
 -- 5 Browse services
 
+ SELECT * FROM Services
+ 
+
 -- 4 Assign tasks to employees
+
+ INSERT INTO Tasks (taskID, OrderID, EmployeeID, taskDescription) 
+ VALUES (1, 2, 3, "4"); --4 inputs; optional
+ 
+ INSERT INTO Employees_Tasks (EmployeesEmplyeeID, TasktaskID)
+ VALUES (1, 2)
+ -- 2 inputs
+
 
 -- 3 Edit employees data
 
--- 2 Edit services
+ UPDATE Employees
+ SET
+	firstName = "input1",
+	lastName = "input2",
+	salary = input3
+ WHERE EmployeeID = input4;
+
+ -- input1 = firstName
+ -- input2 = lastName
+ -- input3 = salary
+ -- input4 = EmployeeID
+
+
+-- -- 2 Edit services
+
+ UPDATE Services
+ SET price = input1
+ WHERE serviceID = input2;
+
+ -- input1 = price
+ -- input2 = serviceID
+
 
 -- 1 Check parts that need to be bought
 -- nie jestem pewny czy to zadziała, trzeba przetestować
