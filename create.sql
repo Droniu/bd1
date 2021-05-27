@@ -13,7 +13,7 @@ CREATE TABLE Tasks (
     PRIMARY KEY (taskID)
 );
 CREATE TABLE Services (
-    servicID int(10) NOT NULL AUTO_INCREMENT,
+    serviceID int(10) NOT NULL AUTO_INCREMENT,
     price int(10),
     PRIMARY KEY (serviceID)
 );
@@ -53,7 +53,7 @@ CREATE TABLE Parts (
     qty int(10),
     name varchar(255),
     manufacturer varchar(255),
-    PRIMARY KEY (orderID)
+    PRIMARY KEY (partID)
 );
 CREATE TABLE Parts_Orders (
     PartspartID int(10) NOT NULL,
