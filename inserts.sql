@@ -64,31 +64,20 @@ insert into car (ClientID, model, year, serviceDate) values (1, 'Murciélago', 2
 
 -- ORDERS TABLE
 
-insert into orders (CarLicense, status, date) values (1, 'Realized', '2021-05-23');
-insert into orders (CarLicense, status, date) values (2, 'Waiting ', '2021-05-21');
-insert into orders (CarLicense, status, date) values (3, 'Realizing', '2021-05-21');
-insert into orders (CarLicense, status, date) values (4, 'Realizing', '2021-05-26');
-insert into orders (CarLicense, status, date) values (5, 'Waiting ', '2021-05-25');
-insert into orders (CarLicense, status, date) values (6, 'Realizing', '2021-05-21');
-insert into orders (CarLicense, status, date) values (7, 'Waiting ', '2021-05-26');
-insert into orders (CarLicense, status, date) values (8, 'Realized', '2021-05-22');
-insert into orders (CarLicense, status, date) values (9, 'Waiting ', '2021-05-21');
-insert into orders (CarLicense, status, date) values (10, 'Realizing', '2021-05-26');
-insert into orders (CarLicense, status, date) values (11, 'Waiting ', '2021-05-23');
-insert into orders (CarLicense, status, date) values (12, 'Realized', '2021-05-25');
-insert into orders (CarLicense, status, date) values (13, 'Realized', '2021-05-21');
-insert into orders (CarLicense, status, date) values (14, 'Waiting ', '2021-05-22');
-insert into orders (CarLicense, status, date) values (15, 'Waiting ', '2021-05-21');
-insert into orders (CarLicense, status, date) values (16, 'Realizing', '2021-05-23');
-insert into orders (CarLicense, status, date) values (17, 'Realized', '2021-05-23');
-insert into orders (CarLicense, status, date) values (18, 'Realized', '2021-05-21');
-insert into orders (CarLicense, status, date) values (19, 'Waiting ', '2021-05-24');
-insert into orders (CarLicense, status, date) values (20, 'Waiting ', '2021-05-25');
-insert into orders (CarLicense, status, date) values (21, 'Waiting ', '2021-05-23');
-insert into orders (CarLicense, status, date) values (22, 'Waiting ', '2021-05-25');
-insert into orders (CarLicense, status, date) values (23, 'Realizing', '2021-05-23');
-insert into orders (CarLicense, status, date) values (24, 'Realizing', '2021-05-25');
-insert into orders (CarLicense, status, date) values (25, 'Realizing', '2021-05-26');
+insert into orders (CarLicense, status, date) values (1, 'Waiting for parts', '2021-05-23');
+insert into orders (CarLicense, status, date) values (3, 'Waiting for parts', '2021-05-21');
+insert into orders (CarLicense, status, date) values (4, 'Repairing', '2021-05-26');
+insert into orders (CarLicense, status, date) values (6, 'Waiting for parts', '2021-05-21');
+insert into orders (CarLicense, status, date) values (8, 'Repairing', '2021-05-22');
+insert into orders (CarLicense, status, date) values (10, 'Waiting for parts', '2021-05-26');
+insert into orders (CarLicense, status, date) values (12, 'Repaired', '2021-05-25');
+insert into orders (CarLicense, status, date) values (13, 'Repaired', '2021-05-21');
+insert into orders (CarLicense, status, date) values (16, 'Repairing', '2021-05-23');
+insert into orders (CarLicense, status, date) values (17, 'Waiting for parts', '2021-05-23');
+insert into orders (CarLicense, status, date) values (18, 'Waiting for parts', '2021-05-21');
+insert into orders (CarLicense, status, date) values (23, 'Waiting for parts', '2021-05-23');
+insert into orders (CarLicense, status, date) values (24, 'Waiting for parts', '2021-05-25');
+insert into orders (CarLicense, status, date) values (25, 'Repaired', '2021-05-26');
 
 -- SERVICES TABLE
 
@@ -156,3 +145,34 @@ insert into parts (price, qty, name , manufacturer) values (50, 1, 'Air filter',
 insert into parts (price, qty, name , manufacturer) values (60, 1, 'Fuel filter', 'Knecht');
 insert into parts (price, qty, name , manufacturer) values (200, 1, 'Gear shifting', 'Febi-Bilstein');
 insert into parts (price, qty, name , manufacturer) values (120, 1, 'Performance gearshift knob', 'Gates');
+
+-- PARTS_ORDERS TABLE
+
+insert into parts_orders (PartspartID , OrdersorderID) values (3,1);
+insert into parts_orders (PartspartID , OrdersorderID) values (7,1);
+insert into parts_orders (PartspartID , OrdersorderID) values (8,1);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (10, 2);
+insert into parts_orders (PartspartID , OrdersorderID) values (15, 2);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (20, 4);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (19, 6);
+insert into parts_orders (PartspartID , OrdersorderID) values (20, 6);
+insert into parts_orders (PartspartID , OrdersorderID) values (22, 6);
+insert into parts_orders (PartspartID , OrdersorderID) values (23, 6);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (5, 10);
+insert into parts_orders (PartspartID , OrdersorderID) values (11, 10);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (9, 11);
+insert into parts_orders (PartspartID , OrdersorderID) values (18, 11);
+insert into parts_orders (PartspartID , OrdersorderID) values (20, 11);
+insert into parts_orders (PartspartID , OrdersorderID) values (21, 11);
+insert into parts_orders (PartspartID , OrdersorderID) values (22, 11);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (1, 12);
+insert into parts_orders (PartspartID , OrdersorderID) values (29, 12);
+
+insert into parts_orders (PartspartID , OrdersorderID) values (14, 13);
+
