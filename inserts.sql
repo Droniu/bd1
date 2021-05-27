@@ -216,3 +216,25 @@ insert into tasks (OrderID , EmployeeID, taskDescription) values (11 , 9 , "Orde
 insert into tasks (OrderID , EmployeeID, taskDescription) values (12 , 10 , "Order 12");
 insert into tasks (OrderID , EmployeeID, taskDescription) values (13 , 1 , "Order 13");
 insert into tasks (OrderID , EmployeeID, taskDescription) values (14 , 2 , "Order 14");
+
+-- EMPLOYEES_TASKS  TABLE
+
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (1 , 1);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (3 , 2);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (4, 3);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (2, 4);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (5, 5);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (3, 6);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (6, 7);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (7, 8);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (4, 9);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (5, 10);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (6, 11);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (7, 12);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (8, 13);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (8, 14);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (9, 15);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (9, 16);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (10, 17);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (1, 18);
+insert into employees_tasks (EmployeesEmployeeID, TaskstaskID) values (2, 19);
