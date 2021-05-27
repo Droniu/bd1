@@ -89,3 +89,36 @@ insert into orders (CarLicense, status, date) values (23, 'Waiting ', '2021-05-2
 insert into orders (CarLicense, status, date) values (24, 'Realizing', '2021-05-23');
 insert into orders (CarLicense, status, date) values (25, 'Realizing', '2021-05-25');
 insert into orders (CarLicense, status, date) values (26, 'Realizing', '2021-05-26');
+
+--SERVICES TABLE
+
+insert into services (price ) values (70);
+insert into services (price ) values (60);
+insert into services (price ) values (100);
+insert into services (price ) values (330);
+insert into services (price ) values (40);
+insert into services (price ) values (440);
+insert into services (price ) values (312);
+insert into services (price ) values (264);
+insert into services (price ) values (396);
+insert into services (price ) values (80);
+insert into services (price ) values (250);
+insert into services (price ) values (250);
+insert into services (price ) values (465);
+insert into services (price ) values (220);
+insert into services (price ) values (20);
+insert into services (price ) values (485);
+insert into services (price ) values (410);
+insert into services (price ) values (410);
+insert into services (price ) values (50);
+insert into services (price ) values (150);
+insert into services (price ) values (140);
+insert into services (price ) values (425);
+insert into services (price ) values (25);
+insert into services (price ) values (210);
+insert into services (price ) values (205);
+insert into services (price ) values (160);
+insert into services (price ) values (320);
+insert into services (price ) values (110);
+insert into services (price ) values (280);
+insert into services (price ) values (210);
