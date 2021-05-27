@@ -48,7 +48,7 @@ CREATE TABLE Employees_Tasks (
     PRIMARY KEY (EmployeesEmployeeID, TaskstaskID)
 );
 CREATE TABLE Parts (
-    orderID int(10) NOT NULL,
+    partID int(10) NOT NULL AUTO_INCREMENT,
     price int(10),
     qty int(10),
     name varchar(255),
@@ -56,7 +56,7 @@ CREATE TABLE Parts (
     PRIMARY KEY (orderID)
 );
 CREATE TABLE Parts_Orders (
-    Partspart]ID int(10) NOT NULL,
+    PartspartID int(10) NOT NULL,
     OrdersorderID int(10) NOT NULL,
     PRIMARY KEY (PartspartID, OrdersorderID)
 );
