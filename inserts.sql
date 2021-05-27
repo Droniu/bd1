@@ -66,12 +66,12 @@ insert into car (ClientID, model, year, serviceDate) values (1, 'Murciélago', 2
 
 insert into orders (CarLicense, status, date) values (1, 'Waiting for parts', '2021-05-23');
 insert into orders (CarLicense, status, date) values (3, 'Waiting for parts', '2021-05-21');
-insert into orders (CarLicense, status, date) values (4, 'Repairing', '2021-05-26');
+insert into orders (CarLicense, status, date) values (4, 'Waiting', '2021-05-26');
 insert into orders (CarLicense, status, date) values (6, 'Waiting for parts', '2021-05-21');
 insert into orders (CarLicense, status, date) values (8, 'Repairing', '2021-05-22');
 insert into orders (CarLicense, status, date) values (10, 'Waiting for parts', '2021-05-26');
 insert into orders (CarLicense, status, date) values (12, 'Repaired', '2021-05-25');
-insert into orders (CarLicense, status, date) values (13, 'Repaired', '2021-05-21');
+insert into orders (CarLicense, status, date) values (13, 'Waiting', '2021-05-21');
 insert into orders (CarLicense, status, date) values (16, 'Repairing', '2021-05-23');
 insert into orders (CarLicense, status, date) values (17, 'Waiting for parts', '2021-05-23');
 insert into orders (CarLicense, status, date) values (18, 'Waiting for parts', '2021-05-21');
@@ -169,7 +169,7 @@ insert into parts_orders (PartspartID , OrdersorderID) values (1, 12);
 insert into parts_orders (PartspartID , OrdersorderID) values (29, 12);
 insert into parts_orders (PartspartID , OrdersorderID) values (14, 13);
 
--- SERVICES_ORDERS
+-- SERVICES_ORDERS TABLE
 
 insert into services_orders (serviceID , orderID) values (1, 1);
 insert into services_orders (serviceID , orderID) values (10, 1);
@@ -194,3 +194,25 @@ insert into services_orders (serviceID , orderID) values (1, 12);
 insert into services_orders (serviceID , orderID) values (7, 13);
 insert into services_orders (serviceID , orderID) values (10, 14);
 insert into services_orders (serviceID , orderID) values (22, 14);
+
+-- TASKS TABLE
+
+insert into tasks (OrderID , EmployeeID, taskDescription) values (1 , 1 , "Order 1");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (1 , 3 , "Order 1");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (1 , 4 , "Order 1");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (2 , 2 , "Order 2");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (2 , 5 , "Order 2");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (4 , 3 , "Order 4");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (4 , 6 , "Order 4");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (4 , 7 , "Order 4");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (5 , 4 , "Order 5");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (6 , 5 , "Order 6");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (7 , 6 , "Order 7");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (9 , 7 , "Order 9");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (9 , 8 , "Order 9");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (10 , 8 , "Order 10");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (10 , 9 , "Order 10");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (11 , 9 , "Order 11");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (12 , 10 , "Order 12");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (13 , 1 , "Order 13");
+insert into tasks (OrderID , EmployeeID, taskDescription) values (14 , 2 , "Order 14");
