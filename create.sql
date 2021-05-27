@@ -1,5 +1,3 @@
--- parts_orders fix
-
 CREATE TABLE Employees (
     EmployeeID int(10) NOT NULL AUTO_INCREMENT,
     firstName varchar(255) NOT NULL,
@@ -57,9 +55,9 @@ CREATE TABLE Parts (
     PRIMARY KEY (orderID)
 );
 CREATE TABLE Parts_Orders (
-    PartsOrderID int(10) NOT NULL,
-    OrdersOrderID int(10) NOT NULL,
-    PRIMARY KEY (PartsOrderID, OrdersOrderID)
+    Partspart]ID int(10) NOT NULL,
+    OrdersorderID int(10) NOT NULL,
+    PRIMARY KEY (PartspartID, OrdersorderID)
 );
 ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O986965 FOREIGN KEY (serviceID) REFERENCES Services (serviceID);
 ALTER TABLE Services_Orders ADD CONSTRAINT FKServices_O848022 FOREIGN KEY (orderID) REFERENCES Orders (orderID);
@@ -69,5 +67,5 @@ ALTER TABLE Car ADD CONSTRAINT FKCar673116 FOREIGN KEY (ClientID) REFERENCES Cli
 ALTER TABLE Employees_Tasks ADD CONSTRAINT FKEmployees_605415 FOREIGN KEY (EmployeesEmployeeID) REFERENCES Employees (EmployeeID);
 ALTER TABLE Employees_Tasks ADD CONSTRAINT FKEmployees_470747 FOREIGN KEY (TaskstaskID) REFERENCES Tasks (taskID);
 ALTER TABLE Parts ADD CONSTRAINT FKParts727991 FOREIGN KEY (orderID) REFERENCES Orders (orderID);
-ALTER TABLE Parts_Orders ADD CONSTRAINT FKParts_Orde557452 FOREIGN KEY (PartsOrderID) REFERENCES Parts (orderID);
-ALTER TABLE Parts_Orders ADD CONSTRAINT FKParts_Orde197961 FOREIGN KEY (OrdersOrderID) REFERENCES Orders (orderID);
+ALTER TABLE Parts_Orders ADD CONSTRAINT FKParts_Orde557452 FOREIGN KEY (PartspartID) REFERENCES Parts (partID);
+ALTER TABLE Parts_Orders ADD CONSTRAINT FKParts_Orde197961 FOREIGN KEY (OrdersorderID) REFERENCES Orders (orderID);
