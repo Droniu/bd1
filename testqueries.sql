@@ -25,14 +25,14 @@
 
 -- 14 Update data about services included in orders
     INSERT INTO Services_Orders
-    VALUES (1, 2);
+    VALUES (3, 2);
     --input1 = serviceID
     --input2 = orderID
 
 
 -- 13 Upate client data
     UPDATE Client
-    SET firstName = "newName"
+    SET firstName = "Krzysztof"
     WHERE ClientID = 2
     --input1 = newName
     --input2 = ClientID
@@ -41,8 +41,8 @@
 -- 12 Update car service date
 
 UPDATE Car
-    SET serviceDate = date
-    WHERE ClientID = 2
+    SET serviceDate = '2005-04-02'
+    WHERE License = 2
     --input1 = date
     --input2 = ClientID
 
@@ -50,29 +50,29 @@ UPDATE Car
 -- 11 Browse car parts
 
  SELECT
-	P.partID AS "Part ID"
-	P.price AS "Price"
-	P.name AS "Name"
+	P.partID AS "Part ID",
+	P.price AS "Price",
+	P.name AS "Name",
 	P.manufacturer AS "Manufacturer"
- FROM Parts
+ FROM Parts AS P
 
 
 -- 10 Browse tasks 
     SELECT
-        Tasks.taskID
-        Tasks.orderID
+        Tasks.taskID,
+        Tasks.orderID,
         Tasks.taskDescription
     FROM Employees_Tasks
     INNER JOIN Tasks
-    ON Employees_Tasks.taskID = Tasks.taskID
-    WHERE Employees_Tasks.EmployeeID = 1
+    ON Employees_Tasks.TaskstaskID = Tasks.taskID
+    WHERE Employees_Tasks.EmployeesEmployeeID = 1
     --input1 = EmploeeID
 
 
 -- 9 Set order status
 
  UPDATE Orders
-    SET status = "currentStatus"
+    SET status = "Repaired"
     WHERE orderID = 2
     --input1 = currentStatus
     --input2 = orderID
@@ -81,28 +81,28 @@ UPDATE Car
 -- 8 Edit list of parts to buy
     -- OPTIONAL (only if part doesn't yet exist in database)
     INSERT INTO Parts (price, qty, name, manufacturer)
-    VALUES (1, 2, "3", "4");
+    VALUES (100, 0, "Front Glass", "Microsoft");
     -- four inputs
 
 
     INSERT INTO Parts_Orders
-    VALUES (1, 2);
+    VALUES (29, 1);
     -- two inputs (partID, orderID)
 
 
 -- 7 Check order status
 
  SELECT O.status
- FROM Orders
- WHERE orderID = input1
+ FROM Orders AS O
+ WHERE orderID = 1
  -- input1 = orderID
 
 
 -- 6 Check car service date
 
  SELECT C.serviceDate
- FROM Cars
- WHERE License = input1
+ FROM Car AS C
+ WHERE License = 1
  -- input1 = License
  
 
@@ -116,7 +116,7 @@ UPDATE Car
  INSERT INTO Tasks (taskID, OrderID, EmployeeID, taskDescription) 
  VALUES (1, 2, 3, "4"); --4 inputs; optional
  
- INSERT INTO Employees_Tasks (EmployeesEmplyeeID, TasktaskID)
+ INSERT INTO Employees_Tasks (EmployeesEmployeeID, TaskstaskID)
  VALUES (1, 2)
  -- 2 inputs
 
@@ -125,10 +125,10 @@ UPDATE Car
 
  UPDATE Employees
  SET
-	firstName = "input1",
-	lastName = "input2",
-	salary = input3
- WHERE EmployeeID = input4;
+	firstName = "Janusz",
+	lastName = "Nowak",
+	salary = 100
+ WHERE EmployeeID = 1;
 
  -- input1 = firstName
  -- input2 = lastName
@@ -139,27 +139,25 @@ UPDATE Car
 -- -- 2 Edit services
 
  UPDATE Services
- SET price = input1
- WHERE serviceID = input2;
+ SET price = 100
+ WHERE serviceID = 1;
 
  -- input1 = price
  -- input2 = serviceID
 
 
 -- 1 Check parts that need to be bought
--- nie jestem pewny czy to zadziała, trzeba przetestować
--- jak będziemy mieć inserty
-    SELECT 
-        Parts.name AS "Part"
-        Parts.manufacturer AS "Manufacturer"
-    FROM Parts_Orders
+SELECT 
+	Parts.name AS "Part",
+	Parts.manufacturer AS "Manufacturer"    
+FROM Parts_Orders
     LEFT JOIN Parts
     ON Parts.partID = Parts_Orders.PartspartID
-    WHERE Parts_Orders.orderID IN (
+    WHERE Parts_Orders.OrdersorderID IN (
         SELECT orderID
         FROM Orders
-        WHERE status <> 'Completed'
-    );
+        WHERE status <> 'Repaired'
+    ) AND Parts.qty=0 ;
 
 
 
